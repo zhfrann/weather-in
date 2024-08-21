@@ -10,7 +10,7 @@ const WeatherImage = ({ images, selectedPlace }) => {
                 <img
                     key={index}
                     className={`absolute w-screen h-screen object-cover opacity-0 z-0 transition-[opacity] duration-[0.5s]  ${selectedPlace === index ? "opacity-100 z-[1]" : ""}`}
-                    src={image}
+                    src={`/weather-in/${image}`}
                     alt={`Weather ${index}`}
                 />
             ))}
@@ -33,11 +33,7 @@ const SearchCountry = () => {
     }, [])
 
     const weatherImages = [
-        "/weathers/clear-weather.jpg",
-        "/weathers/river.jpg",
-        "/weathers/sky-background.jpg",
-        "/weathers/sky-background-2.jpg",
-        "/weathers/bg-hehe.jpg",
+        "/weathers/clear-weather.jpg"
     ]
 
     return (
